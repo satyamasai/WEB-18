@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="commoncss.css">
+    <title>Backend</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><a href="frontend.html"> Frontend </a></div>
+        <div><a href="Backend.html"> Backend </a></div>
+    </div>
+    <div class="container">
+        <form action="">
+              <input type="text" id="name" placeholder="enter name">
+              <input type="text" id="imageurl" placeholder="enter image URL">
+              <input type="text" id="companyurl" placeholder="enter companylogo URL">
+              <input type="text" id="role" placeholder="enter role">
+
+              <input type="submit" id="submit" id="" placeholder="submit">
+
+
+
+        </form>
+    </div>
+    
+</body>
+</html>
+<script>
+        
+
+document.querySelector("form").addEventListener("submit",myFunction)
+
+
+       var investors_arr= JSON.parse(localStorage.getItem("investorsdata")) || [];
+        function myFunction(){
+              event.preventDefault()
+                  var investors_data={
+                   
+                   investors_name:document.querySelector("#name").value,
+                   investors_image : document.querySelector("#imageurl").value,
+                   investors_company: document.querySelector("#companyurl").value,
+                   investors_role: document.querySelector("#role").value
+
+                  } 
+
+              investors_arr.push(investors_data)
+       
+              localStorage.setItem("investorsdata",JSON.stringify( investors_arr))
+
+                     
+     }
+
+     
+</script>

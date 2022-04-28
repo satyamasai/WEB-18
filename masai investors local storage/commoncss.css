@@ -1,0 +1,60 @@
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: navy;
+    color: white;
+    height: 50px;
+    font-size: 30px;
+
+}
+#navbar>div{
+    border: 2px solid black;
+    /* padding: 5px; */
+    border-radius: 8px;
+    margin: 5px;
+    
+}
+a{
+    text-decoration: none;
+    color: aqua;
+}
+input{
+    /* margin-left: 440px; */
+    display: block;
+    margin: 20px;
+    margin-left: 340px;
+    width: 400px;
+    
+    border: 3px solid red;
+}
+#submit{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+.container{
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: grid;
+    /* flex-wrap: wrap; */
+    grid-template-columns: repeat(4,1fr);
+    /* grid-template-rows: repeat(8,auto); */
+    gap: 10px;
+}
+.container>div{
+    border: 1px solid red;
+    text-align: center;
+}
+img{
+    width: 100%;
+
+}
+#companylogo{
+    width: 50%;
+    margin-top: -15px;
+}
+h1{
+    font-size: 26px;
+}
