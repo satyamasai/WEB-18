@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container{
+    width: 300px;
+    height: 300px;
+    border: 5px solid red;
+        margin: auto;
+        text-align: center;
+}
+input{
+    display: block;
+    margin: 40px;
+    width: 80%;
+    height: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Log In</h1>
+        <form action="">
+            <input id="useremail" type="email" placeholder="enter email">
+            <input id="userpassword" type="text" placeholder="enter password">
+            <input type="submit">
+            <a href="signup.html">Create an account</a>
+        </form>
+        
+    </div>
+</body>
+</html>
+<script>
+         var form=document.querySelector("form")
+         form.addEventListener("submit",loginFun)
+        var dataofuser= JSON.parse(localStorage.getItem("user_signup_data"))
+       // console.log(dataofuser)
+        
+         function loginFun(){
+             event.preventDefault()
+                  var email=document.querySelector("#useremail").value
+                  var password=document.querySelector("#userpassword").value
+                  var flag=false
+              dataofuser.forEach(function(elem){
+                  if(elem.email==email&& elem.password==password){
+                      flag=true;
+                  }
+              })
+              if(flag==true){
+                  alert("log in successfully")
+              }else{
+                  alert("email and password are wrong")
+              }
+                
+
+
+         }
+
+</script>
